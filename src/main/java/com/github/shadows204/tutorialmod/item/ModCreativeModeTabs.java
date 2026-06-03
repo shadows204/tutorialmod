@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTabs {
     public static final ResourceKey<CreativeModeTab> TUTORIAL_TAB = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"tutorialmod"));
-    public static final CreativeModeTab TUTORIAL = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModItems.ICE_ETHER)).title(Component.translatable("itemGroup.tutorial")).displayItems((parameters, output) -> {
+    public static final CreativeModeTab TUTORIAL = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModItems.ICE_ETHER)).title(Component.translatable("itemGroup.tutorialmod")).displayItems((parameters, output) -> {
         output.accept(ModItems.ICE_ETHER);
         output.accept(ModItems.RAW_ICE_ETHER);
         output.accept(ModItems.CARDBOARD);
@@ -21,7 +21,7 @@ public class ModCreativeModeTabs {
     }).build();
 
     public static final ResourceKey<CreativeModeTab> TUTORIAL_TAB2 = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"tutorialmod_blocks"));
-    public static final CreativeModeTab TUTORIAL2 = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModBlocks.ICE_ETHER_ORE)).title(Component.translatable("itemGroup.tutorial2")).displayItems((parameters, output) -> {
+    public static final CreativeModeTab TUTORIAL2 = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModBlocks.ICE_ETHER_ORE)).title(Component.translatable("itemGroup.tutorialmod2")).displayItems((parameters, output) -> {
         output.accept(ModBlocks.ICE_ETHER_BLOCK);
         output.accept(ModBlocks.RAW_ICE_ETHER_BLOCK);
         output.accept(ModBlocks.ICE_ETHER_ORE);
