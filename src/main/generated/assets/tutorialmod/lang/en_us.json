@@ -2,9 +2,17 @@
   "block.tutorialmod.ice_ether_block": "Ice Ether Block",
   "block.tutorialmod.ice_ether_ore": "Ice Ether Ore",
   "block.tutorialmod.raw_ice_ether_block": "Raw Ice Ether Block",
+  "item.tutorialmod.anthracite": "Anthracite",
+  "item.tutorialmod.cheese": "Cheese",
+  "item.tutorialmod.corn": "Corn",
+  "item.tutorialmod.cursed_golden_apple": "Cursed Golden Apple",
   "item.tutorialmod.ice_ether": "Ice Ether",
   "item.tutorialmod.material.cardboard": "Cardboard",
+  "item.tutorialmod.prospector": "Prospector",
   "item.tutorialmod.raw_ice_ether": "Raw Ice Ether",
+  "item.tutorialmod.strawberry": "Strawberry",
   "itemGroup.tutorialmod": "Tutorial Mod Items",
-  "itemGroup.tutorialmod2": "Tutorial Mod Items:Blocks"
+  "itemGroup.tutorialmod2": "Tutorial Mod Items:Blocks",
+  "itemGroup.tutorialmod_foods": "Tutorial Mod Items:Foods",
+  "itemGroup.tutorialmod_tools": "Tutorial Mod Items:Tools"
 }

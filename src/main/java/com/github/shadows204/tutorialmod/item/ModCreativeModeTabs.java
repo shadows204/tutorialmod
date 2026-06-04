@@ -17,6 +17,7 @@ public class ModCreativeModeTabs {
         output.accept(ModItems.ICE_ETHER);
         output.accept(ModItems.RAW_ICE_ETHER);
         output.accept(ModItems.CARDBOARD);
+        output.accept(ModItems.ANTHRACITE);
 
     }).build();
 
@@ -29,9 +30,28 @@ public class ModCreativeModeTabs {
     }).build();
 
 
+    public static final ResourceKey<CreativeModeTab> TUTORIAL_TAB_FOODS = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"tutorialmod_foods"));
+    public static final CreativeModeTab TUTORIAL3 = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModItems.CORN)).title(Component.translatable("itemGroup.tutorialmod_foods")).displayItems((parameters, output) -> {
+        output.accept(ModItems.CORN);
+        output.accept(ModItems.STRAWBERRY);
+        output.accept(ModItems.CHEESE);
+        output.accept(ModItems.CURSED_GOLDEN_APPLE);
+
+    }).build();
+
+
+    public static final ResourceKey<CreativeModeTab> TUTORIAL_TAB_TOOLS = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"tutorialmod_tools"));
+    public static final CreativeModeTab TUTORIAL4 = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModItems.PROSPECTOR)).title(Component.translatable("itemGroup.tutorialmod_tools")).displayItems((parameters, output) -> {
+        output.accept(ModItems.PROSPECTOR);
+
+    }).build();
+
+
     public static void register(){
         TutorialMod.LOGGER.info("Registering Custom Creative Mode Tab for"+TutorialMod.MOD_ID);
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,TUTORIAL_TAB,TUTORIAL);
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,TUTORIAL_TAB2,TUTORIAL2);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,TUTORIAL_TAB_FOODS,TUTORIAL3);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,TUTORIAL_TAB_TOOLS,TUTORIAL4);
     }
 }

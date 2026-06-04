@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:paper"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "tutorialmod:material/cardboard"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "tutorialmod:material/cardboard",
+    "D": "minecraft:diamond",
+    "I": "minecraft:iron_block"
+  },
+  "pattern": [
+    "DCD",
+    "CIC",
+    "DCD"
+  ],
+  "result": {
+    "id": "tutorialmod:prospector"
+  }
+}

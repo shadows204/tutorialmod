@@ -2,9 +2,17 @@
   "block.tutorialmod.ice_ether_block": "冰乙醚方块",
   "block.tutorialmod.ice_ether_ore": "冰乙醚矿石",
   "block.tutorialmod.raw_ice_ether_block": "粗冰乙醚方块",
+  "item.tutorialmod.anthracite": "无烟煤",
+  "item.tutorialmod.cheese": "奶酪",
+  "item.tutorialmod.corn": "玉米",
+  "item.tutorialmod.cursed_golden_apple": "负魔金苹果",
   "item.tutorialmod.ice_ether": "冰乙醚",
   "item.tutorialmod.material.cardboard": "纸板",
+  "item.tutorialmod.prospector": "简易探矿器",
   "item.tutorialmod.raw_ice_ether": "粗冰乙醚",
+  "item.tutorialmod.strawberry": "草莓",
   "itemGroup.tutorialmod": "Tutorial模组物品",
-  "itemGroup.tutorialmod2": "Tutorial:方块"
+  "itemGroup.tutorialmod2": "Tutorial:方块",
+  "itemGroup.tutorialmod_foods": "Tutorial:食物",
+  "itemGroup.tutorialmod_tools": "Tutorial:实用工具"
 }

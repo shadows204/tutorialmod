@@ -15,13 +15,23 @@ public class ModModelsProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
+        //Common Items
         itemModelGenerators.generateFlatItem(ModItems.ICE_ETHER, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RAW_ICE_ETHER, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CARDBOARD, ModelTemplates.FLAT_ITEM);
+
+        //Foods
+        itemModelGenerators.generateFlatItem(ModItems.CORN, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STRAWBERRY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CHEESE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CURSED_GOLDEN_APPLE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ANTHRACITE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PROSPECTOR, ModelTemplates.FLAT_ITEM);
     }
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+        //Common Blocks
         blockModelGenerators.createTrivialCube(ModBlocks.ICE_ETHER_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_ICE_ETHER_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.ICE_ETHER_ORE);
