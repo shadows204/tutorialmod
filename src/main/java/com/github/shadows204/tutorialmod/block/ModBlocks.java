@@ -8,14 +8,15 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import org.spongepowered.include.com.google.common.base.Function;
-
-import javax.imageio.spi.RegisterableService;
 
 
 public class ModBlocks {
+    //Common Blocks
     public static final Block ICE_ETHER_BLOCK = register("ice_ether_block",
             BlockBehaviour.Properties.of().strength(1.0f,3.0f),true);
     public static final Block RAW_ICE_ETHER_BLOCK = register("raw_ice_ether_block",
@@ -23,6 +24,31 @@ public class ModBlocks {
     public static final Block ICE_ETHER_ORE = register("ice_ether_ore",
             BlockBehaviour.Properties.of().strength(1.0f,3.0f).requiresCorrectToolForDrops(),true);
 
+    //Stairs
+    public static final Block ICE_ETHER_STAIRS = register("ice_ether_stairs",
+            p->new StairBlock(ICE_ETHER_BLOCK.defaultBlockState(),p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Slabs
+    public static final Block ICE_ETHER_SLAB = register("ice_ether_slab", SlabBlock::new,BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Buttons
+    public static final Block ICE_ETHER_BUTTON = register("ice_ether_button", p->new ButtonBlock(BlockSetType.STONE,20,p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Plates
+    public static final Block ICE_ETHER_PLATE = register("ice_ether_plate",p->new PressurePlateBlock(BlockSetType.STONE,p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Fences
+    public static final Block ICE_ETHER_FENCE_GATE = register("ice_ether_fence_gate",p->new FenceGateBlock(WoodType.OAK,p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+    public static final Block ICE_ETHER_FENCE = register("ice_ether_fence", FenceBlock::new,BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Walls
+    public static final Block ICE_ETHER_WALL = register("ice_ether_wall", WallBlock::new,BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //Doors
+    public static final Block ICE_ETHER_DOOR = register("ice_ether_door",p->new DoorBlock(BlockSetType.IRON,p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
+
+    //TrapDoors
+    public static final Block ICE_ETHER_TRAPDOOR = register("ice_ether_trapdoor",p->new TrapDoorBlock(BlockSetType.OAK,p),BlockBehaviour.Properties.ofFullCopy(ICE_ETHER_BLOCK),true);
 
      public static Block register(final String name, final Function<BlockBehaviour.Properties,Block> factory, final BlockBehaviour.Properties properties,boolean shouldRegisterItem){
          ResourceKey<Block> id = ResourceKey.create(BuiltInRegistries.BLOCK.key(), Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,name));

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tutorialmod:block/ice_ether_plate"
+    },
+    "powered=true": {
+      "model": "tutorialmod:block/ice_ether_plate_down"
+    }
+  }
+}

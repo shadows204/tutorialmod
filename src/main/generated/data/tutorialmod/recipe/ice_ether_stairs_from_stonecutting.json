@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "tutorialmod:ice_ether_block",
+  "result": {
+    "count": 6,
+    "id": "tutorialmod:ice_ether_stairs"
+  }
+}

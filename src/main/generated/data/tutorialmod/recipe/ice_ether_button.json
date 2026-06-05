@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "tutorialmod:ice_ether"
+  },
+  "pattern": [
+    "#"
+  ],
+  "result": {
+    "id": "tutorialmod:ice_ether_button"
+  }
+}

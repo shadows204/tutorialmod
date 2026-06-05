@@ -41,5 +41,15 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(Blocks.DEEPSLATE_EMERALD_ORE)
                 .add(Blocks.DEEPSLATE_REDSTONE_ORE)
                 .add(Blocks.DEEPSLATE_LAPIS_ORE);
+
+        //Fences & Walls
+        valueLookupBuilder(BlockTags.WALLS)
+                .add(ModBlocks.ICE_ETHER_WALL);
+
+        valueLookupBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.ICE_ETHER_FENCE);
+
+        valueLookupBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.ICE_ETHER_FENCE_GATE);
     }
 }

@@ -11,10 +11,13 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
+import static net.minecraft.data.recipes.SingleItemRecipeBuilder.stonecutting;
 
 public class ModRecipesProvider extends FabricRecipeProvider {
     public ModRecipesProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
@@ -28,6 +31,19 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         return new RecipeProvider(provider,recipeOutput) {
             @Override
             public void buildRecipes() {
+                //Stonecutting
+                stonecutting(Ingredient.of(ModBlocks.ICE_ETHER_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ETHER_STAIRS, 6)
+                        .unlockedBy("has_item", has(ModBlocks.ICE_ETHER_BLOCK))
+                        .save(recipeOutput, "ice_ether_stairs_from_stonecutting");
+
+                stonecutting(Ingredient.of(ModBlocks.ICE_ETHER_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ETHER_SLAB, 12)
+                        .unlockedBy("has_item", has(ModBlocks.ICE_ETHER_BLOCK))
+                        .save(recipeOutput, "ice_ether_slab_from_stonecutting");
+
+                stonecutting(Ingredient.of(ModBlocks.ICE_ETHER_BLOCK),RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_WALL,12)
+                        .unlockedBy("has_item", has(ModBlocks.ICE_ETHER_BLOCK))
+                        .save(recipeOutput, "ice_ether_wall_from_stonecutting");
+
                 //Smelting Recipes
                 oreSmelting(ICE_ETHER_LIST, RecipeCategory.MISC, CookingBookCategory.MISC,ModItems.ICE_ETHER, 0.7f, 200,"ice_ether");
                 oreBlasting(ICE_ETHER_LIST, RecipeCategory.MISC, CookingBookCategory.MISC,ModItems.ICE_ETHER, 0.7f, 100,"ice_ether");
@@ -77,6 +93,72 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                         .unlockedBy("has_item",has(Items.DIAMOND))
                         .unlockedBy("has_item_iron_block", has(Items.IRON_BLOCK))
                         .unlockedBy("has_item_cardboard", has(ModItems.CARDBOARD))
+                        .save(recipeOutput);
+
+
+                //Building Constructure Blocks Recipes
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_STAIRS,3)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_SLAB,3)
+                        .pattern("###")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_BUTTON,1)
+                        .pattern("#")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_PLATE,2)
+                        .pattern("##")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_FENCE,6)
+                        .pattern(" # ")
+                        .pattern("###")
+                        .pattern(" # ")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_FENCE_GATE,2)
+                        .pattern("# #")
+                        .pattern("###")
+                        .pattern("# #")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_WALL,6)
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_DOOR,3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
+                        .save(recipeOutput);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ETHER_TRAPDOOR,2)
+                        .pattern("##")
+                        .pattern("##")
+                        .define('#', ModItems.ICE_ETHER)
+                        .unlockedBy("has_item",has(ModItems.ICE_ETHER))
                         .save(recipeOutput);
 
                 //Shapeless Recipes

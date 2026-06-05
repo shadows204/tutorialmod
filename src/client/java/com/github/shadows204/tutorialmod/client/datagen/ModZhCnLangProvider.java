@@ -37,6 +37,31 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RAW_ICE_ETHER_BLOCK,"粗冰乙醚方块");
         translationBuilder.add(ModBlocks.ICE_ETHER_ORE,"冰乙醚矿石");
 
+        //Stairs
+        translationBuilder.add(ModBlocks.ICE_ETHER_STAIRS,"醚质楼梯");
+
+        //Slabs
+        translationBuilder.add(ModBlocks.ICE_ETHER_SLAB,"醚质台阶");
+
+        //Buttons
+        translationBuilder.add(ModBlocks.ICE_ETHER_BUTTON,"醚质按钮");
+
+        //Plates
+        translationBuilder.add(ModBlocks.ICE_ETHER_PLATE,"醚质压力板");
+
+        //Fences
+        translationBuilder.add(ModBlocks.ICE_ETHER_FENCE,"醚质栅栏");
+        translationBuilder.add(ModBlocks.ICE_ETHER_FENCE_GATE,"醚质栅栏门");
+
+        //Walls
+        translationBuilder.add(ModBlocks.ICE_ETHER_WALL,"醚质墙");
+
+        //Doors
+        translationBuilder.add(ModBlocks.ICE_ETHER_DOOR,"醚质门");
+
+        //TrapDoors
+        translationBuilder.add(ModBlocks.ICE_ETHER_TRAPDOOR,"醚质活板门");
+
         //ItemGroup Tabs
         translationBuilder.add("itemGroup.tutorialmod","Tutorial模组物品");
         translationBuilder.add("itemGroup.tutorialmod2","Tutorial:方块");

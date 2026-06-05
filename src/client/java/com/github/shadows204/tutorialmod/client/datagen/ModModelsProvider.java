@@ -26,15 +26,32 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.CHEESE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CURSED_GOLDEN_APPLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ANTHRACITE, ModelTemplates.FLAT_ITEM);
+
+        //Tools
         itemModelGenerators.generateFlatItem(ModItems.PROSPECTOR, ModelTemplates.FLAT_ITEM);
+
     }
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         //Common Blocks
-        blockModelGenerators.createTrivialCube(ModBlocks.ICE_ETHER_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_ICE_ETHER_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.ICE_ETHER_ORE);
+
+        //Constructure Families
+        //Noticing that one block's constructure blocks family includes that block
+        blockModelGenerators.family(ModBlocks.ICE_ETHER_BLOCK)
+                .stairs(ModBlocks.ICE_ETHER_STAIRS)
+                .slab(ModBlocks.ICE_ETHER_SLAB)
+                .button(ModBlocks.ICE_ETHER_BUTTON)
+                .pressurePlate(ModBlocks.ICE_ETHER_PLATE)
+                .fence(ModBlocks.ICE_ETHER_FENCE)
+                .fenceGate(ModBlocks.ICE_ETHER_FENCE_GATE)
+                .wall(ModBlocks.ICE_ETHER_WALL);
+
+        //Door Types
+        blockModelGenerators.createDoor(ModBlocks.ICE_ETHER_DOOR);
+        blockModelGenerators.createTrapdoor(ModBlocks.ICE_ETHER_TRAPDOOR);
     }
 
 }

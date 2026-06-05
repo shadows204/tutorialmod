@@ -28,9 +28,37 @@ public class ModBlockLootTablesProvider extends FabricBlockLootSubProvider{
 
     @Override
     public void generate() {
+        //Common Block
         dropSelf(ModBlocks.ICE_ETHER_BLOCK);
         dropSelf(ModBlocks.RAW_ICE_ETHER_BLOCK);
+
+        //Ores
         add(ModBlocks.ICE_ETHER_ORE, createIceEtherOreDrop(ModBlocks.ICE_ETHER_ORE, ModItems.RAW_ICE_ETHER));
+
+        //Stairs
+        dropSelf(ModBlocks.ICE_ETHER_STAIRS);
+
+        //Slabs
+        add(ModBlocks.ICE_ETHER_SLAB,createSlabItemTable(ModBlocks.ICE_ETHER_SLAB));
+
+        //Buttons
+        dropSelf(ModBlocks.ICE_ETHER_BUTTON);
+
+        //Plates
+        dropSelf(ModBlocks.ICE_ETHER_PLATE);
+
+        //Fences
+        dropSelf(ModBlocks.ICE_ETHER_FENCE);
+        dropSelf(ModBlocks.ICE_ETHER_FENCE_GATE);
+
+        //Walls
+        dropSelf(ModBlocks.ICE_ETHER_WALL);
+
+        //Doors
+        add(ModBlocks.ICE_ETHER_DOOR, createDoorTable(ModBlocks.ICE_ETHER_DOOR));
+
+        //TrapDoors
+        dropSelf(ModBlocks.ICE_ETHER_TRAPDOOR);
     }
 
     public LootTable.Builder createIceEtherOreDrop(final Block block, Item item) {
