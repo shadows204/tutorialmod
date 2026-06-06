@@ -17,11 +17,18 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
         //Tools
         translationBuilder.add(ModItems.PROSPECTOR,"Prospector");
+        translationBuilder.add(ModItems.FIRE_ETHER_SWORD,"Fire Ether Sword");
+        translationBuilder.add(ModItems.FIRE_ETHER_PICKAXE,"Fire Ether Pickaxe");
+        translationBuilder.add(ModItems.FIRE_ETHER_SHOVEL,"Fire Ether Shovel");
+        translationBuilder.add(ModItems.FIRE_ETHER_AXE,"Fire Ether Axe");
+        translationBuilder.add(ModItems.FIRE_ETHER_HOE,"Fire Ether Hoe");
+        translationBuilder.add(ModItems.FIRE_ETHER_PICKAXE_AXE,"Fire Ether Pickaxe Axe");
 
         //Common Items
         translationBuilder.add(ModItems.ICE_ETHER,"Ice Ether");
         translationBuilder.add(ModItems.RAW_ICE_ETHER,"Raw Ice Ether");
         translationBuilder.add(ModItems.CARDBOARD,"Cardboard");
+        translationBuilder.add(ModItems.FIRE_ETHER,"Fire Ether");
 
         //Foods
         translationBuilder.add(ModItems.CORN,"Corn");
@@ -67,5 +74,9 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.tutorialmod2","Tutorial Mod Items:Blocks");
         translationBuilder.add("itemGroup.tutorialmod_foods","Tutorial Mod Items:Foods");
         translationBuilder.add("itemGroup.tutorialmod_tools","Tutorial Mod Items:Tools");
+
+        //Tooltips
+        translationBuilder.add("tooltip.tutorialmod.pickaxe_axe.tooltip.shift","This is a item that can be used as a pickaxe and an axe");
+        translationBuilder.add("tooltip.tutorialmod.pickaxe_axe.tooltip","Hold§6§n§l§o SHIFT §r§r§r§rfor more info!");
     }
 }

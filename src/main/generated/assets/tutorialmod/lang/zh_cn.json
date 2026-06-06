@@ -15,6 +15,13 @@
   "item.tutorialmod.cheese": "奶酪",
   "item.tutorialmod.corn": "玉米",
   "item.tutorialmod.cursed_golden_apple": "负魔金苹果",
+  "item.tutorialmod.fire_ether": "烈焰醚质",
+  "item.tutorialmod.fire_ether_axe": "烈焰醚质斧",
+  "item.tutorialmod.fire_ether_hoe": "烈焰醚质锄",
+  "item.tutorialmod.fire_ether_pickaxe": "烈焰醚质镐",
+  "item.tutorialmod.fire_ether_pickaxe_axe": "烈焰醚质镐斧",
+  "item.tutorialmod.fire_ether_shovel": "烈焰醚质铲",
+  "item.tutorialmod.fire_ether_sword": "烈焰醚质剑",
   "item.tutorialmod.ice_ether": "冰乙醚",
   "item.tutorialmod.material.cardboard": "纸板",
   "item.tutorialmod.prospector": "简易探矿器",
@@ -23,5 +30,7 @@
   "itemGroup.tutorialmod": "Tutorial模组物品",
   "itemGroup.tutorialmod2": "Tutorial:方块",
   "itemGroup.tutorialmod_foods": "Tutorial:食物",
-  "itemGroup.tutorialmod_tools": "Tutorial:实用工具"
+  "itemGroup.tutorialmod_tools": "Tutorial:实用工具",
+  "tooltip.tutorialmod.pickaxe_axe.tooltip": "兼具镐与斧功能！",
+  "tooltip.tutorialmod.pickaxe_axe.tooltip.shift": "按住§6§n§l§o SHIFT §r§r§r§r获得更多信息 "
 }

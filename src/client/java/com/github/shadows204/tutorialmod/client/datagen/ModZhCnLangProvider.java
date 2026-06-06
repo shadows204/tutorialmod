@@ -17,10 +17,17 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
         //Tools
         translationBuilder.add(ModItems.PROSPECTOR,"简易探矿器");
+        translationBuilder.add(ModItems.FIRE_ETHER_SWORD,"烈焰醚质剑");
+        translationBuilder.add(ModItems.FIRE_ETHER_PICKAXE,"烈焰醚质镐");
+        translationBuilder.add(ModItems.FIRE_ETHER_SHOVEL,"烈焰醚质铲");
+        translationBuilder.add(ModItems.FIRE_ETHER_AXE,"烈焰醚质斧");
+        translationBuilder.add(ModItems.FIRE_ETHER_HOE,"烈焰醚质锄");
+        translationBuilder.add(ModItems.FIRE_ETHER_PICKAXE_AXE,"烈焰醚质镐斧");
 
         //Items
         translationBuilder.add(ModItems.ICE_ETHER,"冰乙醚");
         translationBuilder.add(ModItems.RAW_ICE_ETHER,"粗冰乙醚");
+        translationBuilder.add(ModItems.FIRE_ETHER,"烈焰醚质");
         translationBuilder.add(ModItems.CARDBOARD,"纸板");
 
         //Foods
@@ -67,5 +74,9 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.tutorialmod2","Tutorial:方块");
         translationBuilder.add("itemGroup.tutorialmod_foods","Tutorial:食物");
         translationBuilder.add("itemGroup.tutorialmod_tools","Tutorial:实用工具");
+
+        //Tooltips
+        translationBuilder.add("tooltip.tutorialmod.pickaxe_axe.tooltip","兼具镐与斧功能！");
+        translationBuilder.add("tooltip.tutorialmod.pickaxe_axe.tooltip.shift","按住§6§n§l§o SHIFT §r§r§r§r获得更多信息 ");
     }
 }

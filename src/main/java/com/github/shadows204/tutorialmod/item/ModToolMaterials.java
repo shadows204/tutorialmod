@@ -1,0 +1,13 @@
+package com.github.shadows204.tutorialmod.item;
+
+import com.github.shadows204.tutorialmod.tag.ModItemTags;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.ToolMaterial;
+
+public class ModToolMaterials {
+    public static final ToolMaterial FIRE_ETHER = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            2468,12.0f,4.0f,30,
+            ModItemTags.FIRE_ETHER_TOOL_MATERIALS
+    );
+}

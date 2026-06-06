@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
         output.accept(ModItems.RAW_ICE_ETHER);
         output.accept(ModItems.CARDBOARD);
         output.accept(ModItems.ANTHRACITE);
+        output.accept(ModItems.FIRE_ETHER);
 
     }).build();
 
@@ -52,6 +53,12 @@ public class ModCreativeModeTabs {
     public static final ResourceKey<CreativeModeTab> TUTORIAL_TAB_TOOLS = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"tutorialmod_tools"));
     public static final CreativeModeTab TUTORIAL4 = FabricCreativeModeTab.builder().icon(()->new ItemStack(ModItems.PROSPECTOR)).title(Component.translatable("itemGroup.tutorialmod_tools")).displayItems((parameters, output) -> {
         output.accept(ModItems.PROSPECTOR);
+        output.accept(ModItems.FIRE_ETHER_SWORD);
+        output.accept(ModItems.FIRE_ETHER_PICKAXE);
+        output.accept(ModItems.FIRE_ETHER_SHOVEL);
+        output.accept(ModItems.FIRE_ETHER_AXE);
+        output.accept(ModItems.FIRE_ETHER_HOE);
+        output.accept(ModItems.FIRE_ETHER_PICKAXE_AXE);
 
     }).build();
 
