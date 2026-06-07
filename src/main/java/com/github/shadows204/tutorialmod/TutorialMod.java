@@ -3,6 +3,7 @@ package com.github.shadows204.tutorialmod;
 import com.github.shadows204.tutorialmod.block.ModBlocks;
 import com.github.shadows204.tutorialmod.item.ModCreativeModeTabs;
 import com.github.shadows204.tutorialmod.item.ModItems;
+import com.github.shadows204.tutorialmod.util.ModArmorEffects;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
@@ -31,6 +32,8 @@ public class TutorialMod implements ModInitializer {
 			builder.add(ModItems.CARDBOARD, 300);
 			builder.add(ModItems.ANTHRACITE, 2000);
 		});
+
+		ModArmorEffects.register();
 
 		LOGGER.info("Hello Fabric world!");
 	}

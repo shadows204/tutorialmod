@@ -24,6 +24,12 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.FIRE_ETHER_HOE,"烈焰醚质锄");
         translationBuilder.add(ModItems.FIRE_ETHER_PICKAXE_AXE,"烈焰醚质镐斧");
 
+        //Armors
+        translationBuilder.add(ModItems.ICE_ETHER_HELMET,"冰醚头盔");
+        translationBuilder.add(ModItems.ICE_ETHER_CHESTPLATE,"冰醚胸甲");
+        translationBuilder.add(ModItems.ICE_ETHER_LEGGINGS,"冰醚护腿");
+        translationBuilder.add(ModItems.ICE_ETHER_BOOTS,"冰醚靴子");
+
         //Items
         translationBuilder.add(ModItems.ICE_ETHER,"冰乙醚");
         translationBuilder.add(ModItems.RAW_ICE_ETHER,"粗冰乙醚");

@@ -9,6 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
 
@@ -21,8 +22,15 @@ public class ModItems {
     public static final Item FIRE_ETHER_SHOVEL = registerItems("fire_ether_shovel",p->new ShovelItem(ModToolMaterials.FIRE_ETHER,2.0f,-2.8f,p),new Item.Properties().fireResistant());
     public static final Item FIRE_ETHER_AXE = registerItems("fire_ether_axe",p->new AxeItem(ModToolMaterials.FIRE_ETHER,6.0f,-2.8f,p),new Item.Properties().fireResistant());
     public static final Item FIRE_ETHER_HOE = registerItems("fire_ether_hoe",p->new HoeItem(ModToolMaterials.FIRE_ETHER,-3.5f,0.8f,p),new Item.Properties().fireResistant());
-    //public static final Item FIRE_ETHER_PICKAXE_AXE = registerItems("fire_ether_pickaxe_axe",Item::new,new Item.Properties().tool(ModToolMaterials.FIRE_ETHER,ModBlockTags.PICKAXE_AXE_MINABLE,5.0f,-3.0f,0.0f));
+//   public static final Item FIRE_ETHER_PICKAXE_AXE = registerItems("fire_ether_pickaxe_axe",Item::new,new Item.Properties().tool(ModToolMaterials.FIRE_ETHER, ModBlockTags.PICKAXE_AXE_MINABLE,5.0f,-3.0f,0.0f));
     public static final Item FIRE_ETHER_PICKAXE_AXE = registerItems("fire_ether_pickaxe_axe",p->new PickaxeAxeItem(ModToolMaterials.FIRE_ETHER,5.0f,-3.0f,p));
+
+    //Armors
+    public static final Item ICE_ETHER_HELMET = registerItems("ice_ether_helmet",Item::new,new Item.Properties().humanoidArmor(ModArmorMaterials.ICE_ETHER, ArmorType.HELMET));
+    public static final Item ICE_ETHER_CHESTPLATE = registerItems("ice_ether_chestplate",Item::new,new Item.Properties().humanoidArmor(ModArmorMaterials.ICE_ETHER,ArmorType.CHESTPLATE));
+    public static final Item ICE_ETHER_LEGGINGS = registerItems("ice_ether_leggings",Item::new,new Item.Properties().humanoidArmor(ModArmorMaterials.ICE_ETHER,ArmorType.LEGGINGS));
+    public static final Item ICE_ETHER_BOOTS = registerItems("ice_ether_boots",Item::new,new Item.Properties().humanoidArmor(ModArmorMaterials.ICE_ETHER,ArmorType.BOOTS));
+
 
     //Items
     public static final Item ICE_ETHER = registerItems("ice_ether");

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "tutorialmod:ice_ether"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tutorialmod:ice_ether"
+      }
+    ]
+  }
+}
